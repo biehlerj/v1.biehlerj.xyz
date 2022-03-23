@@ -72,7 +72,6 @@ export default function Home({
 export const getStaticProps: GetStaticProps = async () => {
     const allPostsData = getSortedProjectsData();
     const allExperienceData = getSortedExperienceData();
-    console.log(allExperienceData);
     return {
         props: {
             allPostsData,
