@@ -4,7 +4,7 @@ beginDate: '2019-12'
 endDate: ''
 ---
 
-Moebius Solutions, Inc. develops advanced Command and Control software, middleware, and integration platforms for the
+[Moebius Solutions, Inc.](https://www.moesol.com/) develops advanced Command and Control software, middleware, and integration platforms for the
 Navy and Marine Corps. Moebius Solutions has a focus on Opensource Culture and Technical Excellence.
 
 I currently work at Moebius Solutions as a Jr. Software Engineer working for different customers. During my time at
