@@ -11,7 +11,7 @@ export default function MultiDate({
     return (
         <>
             <time dateTime={firstDateString}>{format(firstDate, "LLLL, yyyy")}</time>
-            to
+            {" to "}
             { secondDateString !== "" ?
                 <time dateTime={secondDateString}>{format(secondDate, "LLLL, yyyy")}</time>
                 :
