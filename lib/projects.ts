@@ -3,6 +3,7 @@ import matter from "gray-matter";
 import path from "path";
 import { remark } from "remark";
 import html from "remark-html";
+import {ProjectData} from "../types";
 
 const projectsDirectory = path.join(process.cwd(), "projects");
 
@@ -23,7 +24,7 @@ export function getSortedProjectsData() {
         // Combine the data with the id
         return {
             id,
-            ...(matterResult.data as { date: string; title: string })
+            ...(matterResult.data as ProjectData)
         };
     });
     // Sort projects by date
@@ -64,6 +65,6 @@ export async function getProjectData(id: string) {
     return {
         id,
         contentHtml,
-        ...(matterResult.data as { date: string; title: string })
+        ...(matterResult.data as ProjectData)
     };
 }

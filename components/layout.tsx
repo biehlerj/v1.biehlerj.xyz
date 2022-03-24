@@ -9,10 +9,12 @@ export const siteTitle = "Jacob Biehler's Website";
 
 export default function Layout({
     children,
-    home
+    home,
+    pageName
 }: {
   children: React.ReactNode
   home?: boolean
+  pageName?: string
 }) {
     return (
         <div className={styles.container}>
@@ -54,7 +56,7 @@ export default function Layout({
                         </Link>
                         <h2 className={utilStyles.headingLg}>
                             <Link href="/">
-                                <a className={utilStyles.colorInherit}>{name}</a>
+                                <a className={utilStyles.colorInherit}>{pageName}</a>
                             </Link>
                         </h2>
                     </>

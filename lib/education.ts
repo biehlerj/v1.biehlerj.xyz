@@ -1,34 +1,34 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import {EducationData} from "../types";
 import {remark} from "remark";
 import html from "remark-html";
-import {ExperienceData} from "../types";
 
-const experienceDirectory = path.join(process.cwd(), "experience");
+const educationDirectory = path.join(process.cwd(), "education");
 
-export function getSortedExperienceData() {
-    // Get file names under /experience
-    const fileNames = fs.readdirSync(experienceDirectory);
-    const allExperienceData = fileNames.map(fileName => {
+export function getSortedEducationData() {
+    // Get file names under /education
+    const fileNames = fs.readdirSync(educationDirectory);
+    const allEducationData = fileNames.map(fileName => {
         // Remove ".md" from file name to get id
         const id = fileName.replace(/\.md$/, "");
-
+        
         // Read markdown file as string
-        const fullPath = path.join(experienceDirectory, fileName);
+        const fullPath = path.join(educationDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, "utf8");
-
+        
         // Use gray-matter to parse the project metadata section
         const matterResult = matter(fileContents);
-
+        
         // Combine the data with the id
         return {
             id,
-            ...(matterResult.data as ExperienceData)
+            ...(matterResult.data as EducationData)
         };
     });
     // Sort projects by date
-    return allExperienceData.sort((a, b) => {
+    return allEducationData.sort((a, b) => {
         if (a.beginDate < b.beginDate) {
             return 1;
         } else {
@@ -37,8 +37,8 @@ export function getSortedExperienceData() {
     });
 }
 
-export function getAllExperienceIds() {
-    const fileNames = fs.readdirSync(experienceDirectory);
+export function getAllEducationIds() {
+    const fileNames = fs.readdirSync(educationDirectory);
     return fileNames.map(fileName => {
         return {
             params: {
@@ -48,8 +48,8 @@ export function getAllExperienceIds() {
     });
 }
 
-export async function getExperienceData(id: string) {
-    const fullPath = path.join(experienceDirectory, `${id}.md`);
+export async function getEducationData(id: string) {
+    const fullPath = path.join(educationDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Use gray-matter to parse the project metadata section
@@ -61,10 +61,10 @@ export async function getExperienceData(id: string) {
         .process(matterResult.content);
     const contentHtml = processContent.toString();
 
-    // Combine the data with the id and contentHml
+    // Combine the data with the id and contentHtml
     return {
         id,
         contentHtml,
-        ...(matterResult.data as ExperienceData)
+        ...(matterResult.data as EducationData)
     };
 }
