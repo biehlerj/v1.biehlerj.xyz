@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
+import SocialIcons from "../components/SocialIcons";
 
 export default function Home() {
     return (
@@ -15,7 +16,7 @@ export default function Home() {
             </section>
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                 <Link href={"/experience"}>
-                    <a><b>Professional Experience</b></a>
+                    <a><b>Experience</b></a>
                 </Link>
                 <br />
                 <Link href={"/projects"} >
@@ -23,9 +24,13 @@ export default function Home() {
                 </Link>
                 <br />
                 <Link href={"/education"}>
-                    <a><b>Education and Certifications</b></a>
+                    <a><b>Education</b></a>
                 </Link>
             </section>
+            <br />
+            <footer>
+                <SocialIcons />
+            </footer>
         </Layout>
     );
 }
