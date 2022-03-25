@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: biehlerj-xyz.vercel.app
-Token: 93e1245470580d069bd424af0143a83b7e1be940296580b0ec7398973fa5ef70
