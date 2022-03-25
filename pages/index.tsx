@@ -1,57 +1,36 @@
-import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Date from "../components/date";
 import Layout, { siteTitle } from "../components/layout";
-import { getSortedProjectsData } from "../lib/projects";
 import utilStyles from "../styles/utils.module.css";
+import SocialIcons from "../components/SocialIcons";
 
-export default function Home({
-    allPostsData
-}: {
-  allPostsData: {
-    date: string
-    title: string
-    id: string
-  }[]
-}) {
+export default function Home() {
     return (
         <Layout home>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.headingMd}>
-                <p>Hello I'm Jacob. I am a software engineer.</p>
-                <p>
-          (This is a sample website - you’ll be building a site like this in{" "}
-                    <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-                </p>
+                <p>Hello my name is Jacob Biehler and I am a software engineer. I currently work for <a href="https://www.moesol.com/" target="_blank" rel="noreferrer">Moebius Solutions</a> working with technologies such as Typescript, React, Java, Python, Docker, and more.</p>
+                <p>I am passionate about Linux and Open Source software. In my spare time I enjoy learning new programming languages and technologies, playing video games, going outdoors for a hike, bike ride, or camping, watching anime, and reading manga and light novels.</p>
             </section>
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-                <h2 className={utilStyles.headingLg}>Blog</h2>
-                <ul className={utilStyles.list}>
-                    {allPostsData.map(({ id, date, title }) => (
-                        <li className={utilStyles.listItem} key={id}>
-                            <Link href={`/posts/${id}`}>
-                                <a>{title}</a>
-                            </Link>
-                            <br />
-                            <small className={utilStyles.lightText}>
-                                <Date dateString={date} />
-                            </small>
-                        </li>
-                    ))}
-                </ul>
+                <Link href={"/experience"}>
+                    <a><b>Experience</b></a>
+                </Link>
+                <br />
+                <Link href={"/projects"} >
+                    <a><b>Projects</b></a>
+                </Link>
+                <br />
+                <Link href={"/education"}>
+                    <a><b>Education</b></a>
+                </Link>
             </section>
+            <br />
+            <footer>
+                <SocialIcons />
+            </footer>
         </Layout>
     );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-    const allPostsData = getSortedProjectsData();
-    return {
-        props: {
-            allPostsData
-        }
-    };
-};

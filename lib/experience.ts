@@ -1,21 +1,21 @@
+import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import path from "path";
-import { remark } from "remark";
+import {remark} from "remark";
 import html from "remark-html";
-import {ProjectData} from "../types";
+import {ExperienceData} from "../types";
 
-const projectsDirectory = path.join(process.cwd(), "projects");
+const experienceDirectory = path.join(process.cwd(), "experience");
 
-export function getSortedProjectsData() {
-    // Get file names under /projects
-    const fileNames = fs.readdirSync(projectsDirectory);
-    const allProjectsData = fileNames.map(fileName => {
-    // Remove ".md" from file name to get id
+export function getSortedExperienceData() {
+    // Get file names under /experience
+    const fileNames = fs.readdirSync(experienceDirectory);
+    const allExperienceData = fileNames.map(fileName => {
+        // Remove ".md" from file name to get id
         const id = fileName.replace(/\.md$/, "");
 
         // Read markdown file as string
-        const fullPath = path.join(projectsDirectory, fileName);
+        const fullPath = path.join(experienceDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, "utf8");
 
         // Use gray-matter to parse the project metadata section
@@ -24,12 +24,12 @@ export function getSortedProjectsData() {
         // Combine the data with the id
         return {
             id,
-            ...(matterResult.data as ProjectData)
+            ...(matterResult.data as ExperienceData)
         };
     });
     // Sort projects by date
-    return allProjectsData.sort((a, b) => {
-        if (a.date < b.date) {
+    return allExperienceData.sort((a, b) => {
+        if (a.beginDate < b.beginDate) {
             return 1;
         } else {
             return -1;
@@ -37,8 +37,8 @@ export function getSortedProjectsData() {
     });
 }
 
-export function getAllProjectIds() {
-    const fileNames = fs.readdirSync(projectsDirectory);
+export function getAllExperienceIds() {
+    const fileNames = fs.readdirSync(experienceDirectory);
     return fileNames.map(fileName => {
         return {
             params: {
@@ -48,23 +48,23 @@ export function getAllProjectIds() {
     });
 }
 
-export async function getProjectData(id: string) {
-    const fullPath = path.join(projectsDirectory, `${id}.md`);
+export async function getExperienceData(id: string) {
+    const fullPath = path.join(experienceDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Use gray-matter to parse the project metadata section
     const matterResult = matter(fileContents);
 
     // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
+    const processContent = await remark()
         .use(html)
         .process(matterResult.content);
-    const contentHtml = processedContent.toString();
+    const contentHtml = processContent.toString();
 
-    // Combine the data with the id and contentHtml
+    // Combine the data with the id and contentHml
     return {
         id,
         contentHtml,
-        ...(matterResult.data as ProjectData)
+        ...(matterResult.data as ExperienceData)
     };
 }
