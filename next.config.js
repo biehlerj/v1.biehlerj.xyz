@@ -1,7 +1,8 @@
+const isProd = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    assetPrefix: process.env.NODE_ENV === "production" ? "/biehlerj.xyz" : "",
+    assetPrefix: isProd ? "/biehlerj.xyz/" : "",
     trailingSlash: true,
 };
 
