@@ -23,6 +23,11 @@ const SocialIcons = () => (
                 <FontAwesomeIcon icon={["fas", "file"]} size="2x" />
             </a>
         </div>
+        <div className="pr-3">
+            <a target="_blank" rel="noopener noreferrer" href="mailto:jacob@biehlerj.xyz">
+                <FontAwesomeIcon icon={["fas", "envelope"]} size="2x" />
+            </a>
+        </div>
     </div>
 );
 
