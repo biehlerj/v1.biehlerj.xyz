@@ -11,7 +11,8 @@ pages:
   stage: build
   script:
     - yarn
-    - yarn publish
+    - yarn build
+    - yarn export
     - rm -rf public/*
     - mv out/* public
   artifacts:
