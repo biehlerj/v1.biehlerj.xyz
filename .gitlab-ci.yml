@@ -10,19 +10,12 @@ cache:
 pages:
   before_script:
     # Clean 'public' directory
-    - find public -mindepth 1 -maxdepth 1 ! -name 'fonts' -type d | xargs rm -rf
-    - find public -type f -regex '.*\.\(html\|gz\)$' | xargs rm -rf
+    - find public -mindepth 1 -maxdepth 1 -type d | xargs rm -rf
+    - find public -type f -name "*.html" | xargs rm -rf
     # Install packages
     - yarn install
   script:
-    # Build application and move content to 'public' directory
     - yarn publish
-    # We need a last cleanup as mv command doesn't allow us to merge directories
-    - find public -mindepth 1 -maxdepth 1 -type d | xargs rm -rf
-    # We need to move and rename 404 file to make it work properly
-    - mv out/404/index.html out/404.html
-    - rm -d out/404
-    # We copy output inside expected 'public' directory
     - mv out/* public
   artifacts:
     paths:
