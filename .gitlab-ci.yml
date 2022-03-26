@@ -7,6 +7,8 @@ include:
 
 image: node:lts
 
+variables:
+  NEXT_TELEMETRY_DISABLED: 1
 pages:
   stage: build
   script:
