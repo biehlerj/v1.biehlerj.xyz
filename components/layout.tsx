@@ -16,6 +16,7 @@ export default function Layout({
   home?: boolean
   pageName?: string
 }) {
+    const hostUrl = "v1648266667/pfp_q1nzvd.jpg";
     return (
         <div className={styles.container}>
             <Head>
@@ -32,7 +33,7 @@ export default function Layout({
                     <>
                         <Image
                             priority
-                            src="/images/profile.jpg"
+                            src={`${hostUrl}`}
                             className={utilStyles.borderCircle}
                             height={144}
                             width={144}
@@ -46,7 +47,7 @@ export default function Layout({
                             <a>
                                 <Image
                                     priority
-                                    src="/images/profile.jpg"
+                                    src={`${hostUrl}`}
                                     className={utilStyles.borderCircle}
                                     height={108}
                                     width={108}

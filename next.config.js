@@ -8,6 +8,11 @@ const nextConfig = withBundleAnalyzer({
     assetPrefix: isProd ? "/" : "",
     trailingSlash: true,
 
+    images: {
+        loader: "cloudinary",
+        path: "https://res.cloudinary.com/dpnmq46pq/image/upload/"
+    },
+
     webpack: (config, { dev, isServer }) => {
         if (!dev && isServer) {
             const originalEntry = config.entry;
