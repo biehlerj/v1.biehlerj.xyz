@@ -1,2 +1,21 @@
 include:
   - template: Security/SAST.gitlab-ci.yml
+
+image: node
+
+pages:
+  stage: build
+  script:
+    - yarn
+    - yarn build
+    - yarn export
+    - rm -rf public/*
+    - mv out/* public
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+  only:
+    - release
