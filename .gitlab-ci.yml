@@ -26,4 +26,4 @@ pages:
     - node_modules/
     - .next/cache/
   only:
-    - release
+    - master
