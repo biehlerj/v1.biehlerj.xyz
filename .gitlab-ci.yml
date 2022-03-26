@@ -12,7 +12,7 @@ pages:
   script:
     - yarn
     - yarn build
-    - yarn start
+    - yarn export
     - rm -rf public/*
     - mv out/* public
   artifacts:
