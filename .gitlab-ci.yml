@@ -1,7 +1,3 @@
-stages:
-  - test
-  - build
-
 include:
   - template: Security/SAST.gitlab-ci.yml
 
@@ -29,8 +25,6 @@ pages:
     # We copy output inside expected 'public' directory
     - mv out/* public
   after_script:
-    # Pre-compressing 'public' directory content
-    - find public -type f -regex '.*\.\(html\|js\|css\|json\|xml\|txt\|text\)$' -exec gzip -f -k {} \;
     # Cleanup
     - rm -rf out
   artifacts:
