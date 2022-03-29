@@ -1,16 +1,16 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const SocialIcons = () => (
     <div className="row">
         <div className="pr-3">
-            <a target="_blank" rel="noopener noreferrer" href="https://gitlab.com/biehlerj/">
-                <FontAwesomeIcon icon={["fab", "gitlab"]} size="2x" />
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/biehlerj/">
+                <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
             </a>
         </div>
         <div className="pr-3">
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/biehlerj/">
-                <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
+            <a target="_blank" rel="noopener noreferrer" href="https://gitlab.com/biehlerj/">
+                <FontAwesomeIcon icon={["fab", "gitlab"]} size="2x" />
             </a>
         </div>
         <div className="pr-3">
