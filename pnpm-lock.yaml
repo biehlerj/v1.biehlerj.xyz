@@ -6,7 +6,7 @@ specifiers:
   '@fortawesome/free-solid-svg-icons': ^6.1.1
   '@fortawesome/react-fontawesome': ^0.1.18
   '@types/node': 17.0.42
-  '@types/react': 18.0.12
+  '@types/react': 18.0.14
   date-fns: ^2.28.0
   eslint: '8'
   eslint-config-next: 12.1.6
@@ -33,7 +33,7 @@ dependencies:
 
 devDependencies:
   '@types/node': 17.0.42
-  '@types/react': 18.0.12
+  '@types/react': 18.0.14
   eslint: 8.13.0
   eslint-config-next: 12.1.6_jhpaegms5pahaolbyc27euae5i
   typescript: 4.7.3
@@ -296,8 +296,8 @@ packages:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
     dev: true
 
-  /@types/react/18.0.12:
-    resolution: {integrity: sha512-duF1OTASSBQtcigUvhuiTB1Ya3OvSy+xORCiEf20H0P0lzx+/KeVsA99U5UjLXSbyo1DRJDlLKqTeM1ngosqtg==}
+  /@types/react/18.0.14:
+    resolution: {integrity: sha512-x4gGuASSiWmo0xjDLpm5mPb52syZHJx02VKbqUKdLmKtAwIh63XClGsiTI1K6DO5q7ox4xAsQrU+Gl3+gGXF9Q==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
