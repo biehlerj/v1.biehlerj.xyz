@@ -50,3 +50,8 @@
 .lightText {
     color: #666;
 }
+
+.inlineDisplay {
+    display: inline-flex;
+    margin-bottom: 21.6px;
+}

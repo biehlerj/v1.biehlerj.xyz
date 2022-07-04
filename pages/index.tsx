@@ -14,17 +14,17 @@ export default function Home() {
                 <p>Hello my name is Jacob Biehler and I am a software engineer. I currently work for <a href="https://www.moesol.com/" target="_blank" rel="noreferrer">Moebius Solutions</a> working with technologies such as Typescript, React, Java, Python, Docker, and more.</p>
                 <p>I am passionate about Linux and Open Source software. In my spare time I enjoy learning new programming languages and technologies, playing video games, going outdoors for a hike, bike ride, or camping, watching anime, and reading manga and light novels.</p>
             </section>
-            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.inlineDisplay}`}>
                 <Link href={"/experience"}>
-                    <a><b>Experience</b></a>
+                    <a style={{ paddingRight: "10px"}}><b>Experience</b></a>
                 </Link>
                 <br />
                 <Link href={"/projects"} >
-                    <a><b>Projects</b></a>
+                    <a style={{ paddingRight: "10px"}}><b>Projects</b></a>
                 </Link>
                 <br />
                 <Link href={"/education"}>
-                    <a><b>Education</b></a>
+                    <a style={{ paddingRight: "10px"}}><b>Education</b></a>
                 </Link>
             </section>
             <br />

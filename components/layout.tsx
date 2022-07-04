@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import utilStyles from "../styles/utils.module.css";
+import Favicon from "./Favicon";
 import styles from "./layout.module.css";
 
 const name = "Jacob Biehler";
@@ -20,7 +21,7 @@ export default function Layout({
     return (
         <div className={styles.container}>
             <Head>
-                <link rel="icon" href="/favicon.ico" />
+                <Favicon />
                 <meta
                     name="description"
                     content="Information about Jacob Biehler"
