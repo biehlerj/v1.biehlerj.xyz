@@ -1,6 +1,6 @@
 # Personal website written with Next.js
 
-![Github Pages](https://github.com/biehlerj/biehlerj.github.io/actions/workflows/deploy.yml/badge.svg)
+![Github Pages](https://github.com/biehlerj/biehlerj.github.io/actions/workflows/deploy.yml/badge.svg?event=push&branch=master)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
