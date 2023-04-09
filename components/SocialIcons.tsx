@@ -14,7 +14,7 @@ const SocialIcons = () => (
             </a>
         </div>
         <div className="pr-3">
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jacob-biehler-475573139/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jacob-biehler/">
                 <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
             </a>
         </div>
