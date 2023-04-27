@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
@@ -14,7 +13,7 @@ module.exports = {
       // default is `false`, which means no prefix
       prefix: "ctp",
       // which flavour of colours to use by default, in the `:root`
-      defaultFlavour: "latte"
+      defaultFlavour: "mocha"
     }),
   ],
 };
