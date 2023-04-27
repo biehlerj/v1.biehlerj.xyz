@@ -12,7 +12,7 @@ export default function Experience({ allExperienceData }) {
                 {allExperienceData.map(({ id, beginDate, endDate, title }) => (
                     <li className={utilStyles.listItem} key={id}>
                         <Link href={`/experience/${id}`}>
-                            <a>{title}</a>
+                            {title}
                         </Link>
                         <br/>
                         <small className={utilStyles.lightText}>

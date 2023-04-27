@@ -15,7 +15,7 @@ export default function Education({allEducationData, allCertsData}) {
                 {allEducationData.map(({id, title, beginDate, endDate, location, degree}) => (
                     <li className={utilStyles.listItem} key={id}>
                         <Link href={`/education/${id}`}>
-                            <a>{title}</a>
+                            {title}
                         </Link>
                         <br />
                         <small className={utilStyles.lightText}>
@@ -33,7 +33,7 @@ export default function Education({allEducationData, allCertsData}) {
                 {allCertsData.map(({ id, title, date }) => (
                     <li className={utilStyles.listItem} key={id}>
                         <Link href={`/certs/${id}`}>
-                            <a>{title}</a>
+                            {title}
                         </Link>
                         <br />
                         <small className={utilStyles.lightText}>

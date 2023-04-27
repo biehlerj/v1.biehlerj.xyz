@@ -15,16 +15,16 @@ export default function Home() {
                 <p>I am passionate about Linux and Open Source software. In my spare time I enjoy learning new programming languages and technologies, playing video games, going outdoors for a hike, bike ride, or camping, watching anime, and reading manga and light novels.</p>
             </section>
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.inlineDisplay}`}>
-                <Link href={"/experience"}>
-                    <a style={{ paddingRight: "10px" }}><b>Experience</b></a>
+                <Link href={"/experience"} style={{ paddingRight: "10px" }}>
+                    <b>Experience</b>
                 </Link>
                 <br />
-                <Link href={"/projects"} >
-                    <a style={{ paddingRight: "10px" }}><b>Projects</b></a>
+                <Link href={"/projects"} style={{ paddingRight: "10px" }}>
+                    <b>Projects</b>
                 </Link>
                 <br />
-                <Link href={"/education"}>
-                    <a style={{ paddingRight: "10px" }}><b>Education</b></a>
+                <Link href={"/education"} style={{ paddingRight: "10px" }}>
+                    <b>Education</b>
                 </Link>
             </section>
             <br />
