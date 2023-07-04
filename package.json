@@ -25,7 +25,7 @@
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.1",
     "@types/node": "20.3.3",
-    "@types/react": "18.2.8",
+    "@types/react": "18.2.14",
     "autoprefixer": "^10.4.14",
     "eslint": "8",
     "eslint-config-next": "13.4.8",
