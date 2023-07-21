@@ -10,7 +10,7 @@ export default function Home() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={utilStyles.headingMd}>
+            <section className={`${utilStyles.headingMd} ctp-mocha`}>
                 <p>Hello my name is Jacob Biehler and I am a full-stack software engineer who is currently looking for work. I have experience working with technologies such as Typescript, React, Java, Python, Docker, and more.</p>
                 <p>I am passionate about Linux and Open Source software. In my spare time I enjoy learning new programming languages and technologies, playing video games, going outdoors for a hike, bike ride, or camping, watching anime, and reading manga and light novels.</p>
             </section>

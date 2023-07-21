@@ -17,9 +17,8 @@ export default function Layout({
   home?: boolean
   pageName?: string
 }) {
-    const hostUrl = "v1648266667/pfp_q1nzvd.jpg";
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ctp-mocha`}>
             <Head>
                 <Favicon />
                 <meta
@@ -34,7 +33,7 @@ export default function Layout({
                     <>
                         <Image
                             priority
-                            src={`${hostUrl}`}
+                            src={"/profile.jpg"}
                             className={utilStyles.borderCircle}
                             height={144}
                             width={144}
@@ -48,7 +47,7 @@ export default function Layout({
                             <a>
                                 <Image
                                     priority
-                                    src={`${hostUrl}`}
+                                    src={"/profile.jpg"}
                                     className={utilStyles.borderCircle}
                                     height={108}
                                     width={108}
